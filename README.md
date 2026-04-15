@@ -1,6 +1,6 @@
 # Water-Quality
 
-Decision Intelligence for Florida Water Safety Triage
+Decision Intelligence for Florida Water Safety Triage.
 
 ## Description
 
@@ -20,9 +20,11 @@ Before running the project, make sure the following are available:
   * `ggplot2`
   * `pROC`
   * `dplyr`
-  * `readr` or base R CSV loading
-  * `iml` if local explainability plots are included
-  * any additional package named in the scripts
+  * `readr`
+  * `iml` 
+
+* Required Data Set:
+https://www.kaggle.com/datasets/shreyanshverma27/water-quality-testing/code
 
 ### Installing
 
@@ -31,7 +33,7 @@ Before running the project, make sure the following are available:
 3. Confirm the dataset filename matches the filename expected by the scripts.
 4. Open the project in RStudio or open the relevant `.R` scripts in R.
 
-Recommended project structure:
+Project Structure:
 
 ```text
 Water-Quality/
@@ -50,8 +52,6 @@ Water-Quality/
 └── memo/
 ```
 
-If your local machine uses a different file path, update the file path in the script or set the working directory to the project folder before running.
-
 ### Executing program
 
 Run the scripts in the order below:
@@ -62,7 +62,7 @@ Run the scripts in the order below:
 4. Generate visualizations and exhibits
 5. Run monitoring or governance checks if included
 
-Example workflow in R:
+Workflow:
 
 ```r
 source("scripts/01_data_cleaning.R")
@@ -72,16 +72,12 @@ source("scripts/04_visualizations.R")
 source("scripts/05_monitoring_checks.R")
 ```
 
-If running manually inside RStudio, open each script and run them in sequence from top to bottom.
-
 Main expected outputs include:
 
-* scored water-sample dataset
-* ROC / PR figure
+* water-sample dataset
 * threshold or policy table
 * Top-K prioritization table
 * 3-band review policy exhibit
-* monitoring or drift summary outputs
 
 ## Help
 
@@ -104,45 +100,24 @@ Common issues and fixes:
 
   * Use relative file paths where possible, or update the CSV path in the script.
 
-If the project fails during package loading, run:
-
-```r
-sessionInfo()
-```
-
 to confirm your R version and installed packages.
 
-## Authors
+## Author
 
 Killian Williams
-Decision Intelligence / Data Science Project
 
 ## Version History
-
-* 0.3
-
-  * Added capstone pathway structure, threshold logic, and governance notes
-  * Organized project around classification, triage, and review-band policy
-* 0.2
-
-  * Added modeling and visualization workflow
-  * Expanded threshold and monitoring outputs
 * 0.1
 
-  * Initial project setup and exploratory analysis
+  * Initial project setup and exploratory analysis.
 
 ## License
 
-This project is currently for academic use unless otherwise specified. Add a formal license before public distribution.
+This project is currently for University of South Florida academic work.
 
 ## Acknowledgments
 
 * University of South Florida Decision Intelligence Studio materials
-* Course slides and lab guidance on baselines, thresholds, governance, and monitoring
 * README template inspiration from:
 
-  * [awesome-readme](https://github.com/matiassingers/awesome-readme)
   * [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-  * [dbader](https://github.com/dbader/readme-template)
-  * [zenorocha](https://gist.github.com/zenorocha/4526327)
-  * [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
